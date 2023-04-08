@@ -11,8 +11,10 @@ export interface TextProps {
 export function Text({size = 'md', children, asChild}: TextProps) {
     const Comp = asChild ? Slot : 'span'
     return (
-            <Comp className={clsx('text-gray-100 font-sans',{
-                'text-sx' : size === 'sm',
+            <Comp className={clsx(
+                'text-gray-100 font-sans',
+            {
+                'text-xs' : size === 'sm',
                 'text-sm' : size === 'md',
                 'text-md' : size === 'lg',
             }
